@@ -1,0 +1,8 @@
+/.hugo_build.lock
+/public/
+/resources/
+/assets/jsconfig.json
+hugo_stats.json
+
+# MacOS Only 
+.DS_Store

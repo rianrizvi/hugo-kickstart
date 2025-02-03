@@ -1,0 +1,43 @@
+{{ define "header-main" }} 
+  {{ if (default false .Params.redborders)  }} 
+  <style>
+    .redborders {
+    border:1px solid red;
+    }
+  </style>
+  {{ end }}
+
+  <header class="redborders">
+    <nav>
+      <ul>
+        <li>
+          <h1><a href="/">{{ .Site.Title }}</a></h1>
+        </li>
+      </ul>
+      <ul>
+          {{ range where .Pages "Type" "section" }}
+          <li>
+            <a href="#{{ .Slug }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+
+      </ul>
+    </nav>
+  </header>
+  <!-- ./ Header -->
+
+  <main>
+  <div class="redborders">
+  {{ .Content }}
+  </div>
+  {{ range sort .Pages "Weight" }}
+  <section id="{{ .Slug }}" class="redborders">
+  <h1 >{{ .Title }}</h1>
+  {{ .Content }}
+  </section>
+  {{ else }}
+  <div>Run <kbd>$ hugo new content &ltfilename&gt</kbd> to add sections as Picocss cards</div>
+  {{ end }}
+  </main>
+{{ end }}
+

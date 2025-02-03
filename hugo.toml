@@ -1,0 +1,12 @@
+baseURL = "https://kickstartplatforms.com/"
+title = 'Kickstart'
+
+# declare no taxonomies, otherwise hugo complains
+[taxonomies]
+
+# allow raw html in the content files
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
