@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    <link rel="shortcut icon" href="https://picocss.com/favicon.ico" />
+
+    <!-- Pico CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    >
+    <!-- Custom CSS (if needed) -->
+    <link rel="stylesheet" href="/css/custom.css" />
+  </head>
+  <body>
+    <!-- header and main content area -->
+    {{ block "header-main" . }}{{ end }}
+    <!-- ./ header and main content area -->
+
+    <!-- Footer -->
+    <footer>
+      <small>
+        <span>Copyright 2025 - Rian Rizvi</span>
+        <a href="https://github.com/rianrizvi/kickstart">Github</a>
+        <span>Minimal Hugo Site styled with Picocss</span>
+      </small>
+    </footer>
+    <!-- ./ Footer -->
+  </body>
+</html>
+
